@@ -1,7 +1,11 @@
+import pandas as pd
 import streamlit as st
 import pickle
 
-from train_model import vectorizer
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+from train_model import df_fake
 
 # Load trained model and vectorizer
 with open("model.pkl", "rb") as f:
@@ -22,3 +26,19 @@ if st.button("Check Credibility"):
         prediction = model.predict(transformed_text[0])
         label = "TRUE NEWS" if prediction == 1 else "FAKE NEWS"
         st.success(f"Predicted category: **{label}**")
+
+# load for visualization
+df_fake = pd.read_csv("fake.csv")
+df_true = pd.read_csv("true.csv")
+
+# Labels for visualization
+df_fake["label"] = "Fake News"
+df_true["label"] = "True News"
+df = pd.concat([df_fake, df_true])
+
+# Sidebar for Data
+st.sidebar.header("Explore Dataset")
+if st.sidebar.button("Show Class Distribution"):
+    fig, ax = plt.subplots()
+    sns.countplot(data=df, x="label", palette="coolwarm", ax=ax)
+    st.pyplot(fig)

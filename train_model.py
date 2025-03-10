@@ -3,6 +3,7 @@ from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.naive_bayes import MultinomialNB
 from sklearn.model_selection import train_test_split
 import pickle
+from sklearn.metrics import classification_report
 
 # Load data
 df_fake = pd.read_csv("fake.csv")
@@ -41,3 +42,11 @@ with open("model.pkl", "wb") as f:
     pickle.dump(model, f)
 with open("vectorizer.pkl", "wb") as f:
     pickle.dump(vectorizer, f)
+
+# Test Performance
+y_pred = model.predict(X_test)
+report = classification_report(y_test, y_pred)
+
+# Save report to file
+with open("model_evaluation.txt", "w") as f:
+    f.write(report)
