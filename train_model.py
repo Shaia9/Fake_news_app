@@ -5,10 +5,11 @@ from sklearn.model_selection import train_test_split
 import pickle
 from sklearn.metrics import classification_report, confusion_matrix
 import numpy as np
+from typing import BinaryIO
 
 # Load data
-df_fake = pd.read_csv("fake.csv")
-df_true = pd.read_csv("true.csv")
+df_fake = pd.read_csv("Fake.csv")
+df_true = pd.read_csv("True.csv")
 
 # Assign: fake = 0, 1 = true
 df_fake["label"] = 0
