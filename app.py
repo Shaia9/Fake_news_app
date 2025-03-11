@@ -8,6 +8,10 @@ from wordcloud import WordCloud
 from sklearn.metrics import confusion_matrix, classification_report
 import numpy as np
 
+# Manual install for Streamlit
+import os
+os.system("pip install -r requirements.txt")
+
 # Load trained model and vectorizer
 with open("model.pkl", "rb") as f:
     model = pickle.load(f)
