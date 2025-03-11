@@ -4,10 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="95c2fe70-35cf-41f3-b905-0db8c91eca12" name="Changes" comment="Add Manual install for deployment">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/train_model.py" beforeDir="false" afterPath="$PROJECT_DIR$/train_model.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vectorizer.pkl" beforeDir="false" afterPath="$PROJECT_DIR$/vectorizer.pkl" afterDir="false" />
+    <list default="true" id="95c2fe70-35cf-41f3-b905-0db8c91eca12" name="Changes" comment="Changes for deployment with CSV">
+      <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -151,7 +149,15 @@
       <option name="project" value="LOCAL" />
       <updated>1741729492616</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Changes for deployment with CSV">
+      <option name="closed" value="true" />
+      <created>1741730195676</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1741730195676</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -162,6 +168,7 @@
     <MESSAGE value="Added the final visualizations to app.py and save csv files added to train_model.py" />
     <MESSAGE value="Added requirements.txt and included csv files for deployment" />
     <MESSAGE value="Add Manual install for deployment" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add Manual install for deployment" />
+    <MESSAGE value="Changes for deployment with CSV" />
+    <option name="LAST_COMMIT_MESSAGE" value="Changes for deployment with CSV" />
   </component>
 </project>

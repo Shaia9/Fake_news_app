@@ -33,8 +33,8 @@ if st.button("Check Credibility"):
         st.success(f"Predicted category: **{label}**")
 
 # load for visualization
-df_fake = pd.read_csv("fake.csv")
-df_true = pd.read_csv("true.csv")
+df_fake = pd.read_csv("Fake.csv")
+df_true = pd.read_csv("True.csv")
 
 # Labels for visualization
 df_fake["label"] = "Fake News"
